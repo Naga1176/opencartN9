@@ -105,10 +105,10 @@ public class BaseClas {
 
 	}
 
-	@AfterClass(groups= {"sanity","Regresssion","Master"})
-	public void teardown() {
-		driver.quit();
-	}
+	//@AfterClass(groups= {"sanity","Regresssion","Master"})
+	//public void teardown() {
+		//driver.quit();
+	//}
 
 	// private Class<?> logger() {
 	// TODO Auto-generated method stub
