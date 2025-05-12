@@ -31,7 +31,7 @@ public class TC05_AddToCart  extends BaseClas
 		lp.password(p.getProperty("password"));
 		lp.login();
 		
-		//search
+		//search functionality
 		
 		
 		Search se = new Search(driver);

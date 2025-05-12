@@ -14,7 +14,10 @@ public class LoginPage extends BaseClass{
 		PageFactory.initElements(driver, this); 
 		
 	}
-	
+	@FindBy(xpath = "//span[contains(text(),\"My Account\")]")
+	 WebElement Myaccount;
+	@FindBy(xpath ="//ul[@class=\"dropdown-menu dropdown-menu-right\"]//li//a[contains(text(),\"Login\")]")
+	WebElement intiallogin;
 	@FindBy(xpath ="//input[@placeholder=\"E-Mail Address\"]")
 	WebElement email;
 	@FindBy(xpath ="//input[@placeholder=\"Password\"]")
@@ -25,7 +28,13 @@ public class LoginPage extends BaseClass{
 	
 	
 	
+	public void Myaccount() {
+		Myaccount.click();
+	}
 	
+	public void intiallogin() {
+		intiallogin.click();
+	}
 	public void email(String mail) {
 		email.sendKeys(mail);
 	}

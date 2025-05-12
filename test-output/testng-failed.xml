@@ -6,15 +6,15 @@
   </listeners>
   <test thread-count="5" name="chrometest(failed)">
     <parameter name="os" value="Windows"/>
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="edge"/>
     <classes>
-      <class name="testCases.TC03_LoginDataDrivenTest">
+      <class name="testCases.TC04_Search">
         <methods>
-          <include name="verify_LoginDDT" invocation-numbers="0"/>
+          <include name="verify_search"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- testCases.TC03_LoginDataDrivenTest -->
+      </class> <!-- testCases.TC04_Search -->
     </classes>
   </test> <!-- chrometest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

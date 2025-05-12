@@ -31,6 +31,7 @@ public class BaseClas {
 	public static WebDriver driver;
 	public Properties p;
 
+	@SuppressWarnings("deprecation")
 	@BeforeClass(groups= {"sanity","Regresssion","Master"})
 	@Parameters({ "os", "browser" })
 	public void setup(String os, String br) throws IOException {
@@ -41,7 +42,10 @@ public class BaseClas {
 		
 		p = new Properties();
 		p.load(file);
-		/* This is for grid environment
+		//This is for grid environment
+		/*
+		String hburl = "http://localhost:4444/wd/hub";
+		
 		if(p.getProperty("execution_env").equalsIgnoreCase("remote"))
 		{
 			DesiredCapabilities capabilities = new DesiredCapabilities();
@@ -70,7 +74,7 @@ public class BaseClas {
 			default: System.out.println("No matching browser"); return;
 			}
 			
-			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
+			driver = new RemoteWebDriver(new URL(hburl),capabilities);
 			
 		}
 		
@@ -105,12 +109,12 @@ public class BaseClas {
 
 	}
 
-	//@AfterClass(groups= {"sanity","Regresssion","Master"})
-	//public void teardown() {
-		//driver.quit();
-	//}
+	@AfterClass(groups= {"sanity","Regresssion","Master"})
+	public void teardown() {
+		driver.quit();
+	}
 
-	// private Class<?> logger() {
+	//private Class<?> logger() {
 	// TODO Auto-generated method stub
 	// return null;
 	// }

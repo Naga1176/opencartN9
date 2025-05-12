@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.TC04_Search">
         <methods>
-          <include name="verify_login_account"/>
+          <include name="verify_search"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

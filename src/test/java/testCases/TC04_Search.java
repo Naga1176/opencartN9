@@ -21,12 +21,14 @@ public class TC04_Search extends BaseClas{
 
 		
 		//home page
-		HomePage Hm = new HomePage(driver);
+		/*HomePage Hm = new HomePage(driver);
 		Hm.clickmyaccount();
-		Hm.clicklogin();
+		Hm.clicklogin();*/
 
 		//Login Page
 		LoginPage lp = new LoginPage(driver);
+		lp.Myaccount();
+		lp.intiallogin();
 		lp.email(p.getProperty("email"));
 		lp.password(p.getProperty("password"));
 		lp.login();
