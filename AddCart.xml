@@ -16,7 +16,9 @@
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
 			<!--<class name="testCases.TC04_Search" />-->
-			<class name="testCases.TC05_AddToCart" />
+			<!--<class name="testCases.TC05_AddToCart" />-->
+			
+			<class name="testCases.TC06_Checkout" />
 		</classes>
 	</test> <!--
 	Test -->

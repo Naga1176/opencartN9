@@ -4,17 +4,17 @@
   <listeners>
     <listener class-name="utilities.ExtentReportsManager"/>
   </listeners>
-  <test thread-count="5" name="chrometest(failed)">
+  <test thread-count="5" name="test(failed)">
     <parameter name="os" value="Windows"/>
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="testCases.TC04_Search">
+      <class name="testCases.TC06_Checkout">
         <methods>
-          <include name="verify_search"/>
+          <include name="Checkout_Test"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
-      </class> <!-- testCases.TC04_Search -->
+      </class> <!-- testCases.TC06_Checkout -->
     </classes>
-  </test> <!-- chrometest(failed) -->
+  </test> <!-- test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -103,7 +103,7 @@ public class BaseClas {
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
 		driver.get(p.getProperty("appURL"));//reading URL from properties file
 
@@ -111,7 +111,7 @@ public class BaseClas {
 
 	@AfterClass(groups= {"sanity","Regresssion","Master"})
 	public void teardown() {
-		driver.quit();
+		//driver.quit();
 	}
 
 	//private Class<?> logger() {
